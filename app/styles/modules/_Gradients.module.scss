@@ -1,0 +1,42 @@
+@mixin gradientBG {
+  background: linear-gradient(153deg, #868942, #ad63ad, #0000ff);
+  background-size: 600% 600%;
+
+  -webkit-animation: gradientBG 30s ease infinite;
+  -moz-animation: gradientBG 30s ease infinite;
+  animation: gradientBG 30s ease infinite;
+
+  @-webkit-keyframes gradientBG {
+    0% {
+      background-position: 64% 0%;
+    }
+    50% {
+      background-position: 37% 100%;
+    }
+    100% {
+      background-position: 64% 0%;
+    }
+  }
+  @-moz-keyframes gradientBG {
+    0% {
+      background-position: 64% 0%;
+    }
+    50% {
+      background-position: 37% 100%;
+    }
+    100% {
+      background-position: 64% 0%;
+    }
+  }
+  @keyframes gradientBG {
+    0% {
+      background-position: 64% 0%;
+    }
+    50% {
+      background-position: 37% 100%;
+    }
+    100% {
+      background-position: 64% 0%;
+    }
+  }
+}

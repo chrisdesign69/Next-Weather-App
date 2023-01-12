@@ -1,0 +1,69 @@
+@use '_Variables.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+
+
+// Default Mixins
+
+@mixin gridRoot {
+    display: grid;
+    grid-template-rows: 5rem 1fr 5rem;
+  }
+  
+  @mixin gridCenter {
+    display: grid;
+    place-items: center;
+  }
+  
+  @mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @mixin flexRow {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @mixin borderNone {
+    outline: 1px solid transparent;
+  }
+  
+  @mixin borderWhite {
+    outline: 1px solid $white;
+  }
+  
+  @mixin borderRed {
+    outline: 1px solid red;
+  }
+  
+  @mixin borderBlue {
+    outline: 1px solid rgb(27, 27, 246);
+  }
+  
+  @mixin borderGreen {
+    outline: 1px solid rgb(13, 223, 48);
+  }
+
+
+  //=====================================================Root
+  @mixin homeMixin {
+    @include flexColumn;
+        align-items: center;
+        justify-content: center;
+        background-color: $bg2;
+        width: 100%;
+        height: 100%;
+  }
+  
+  @mixin home1Mixin {
+    background-color: transparent;
+                outline: none;
+                border: none;
+                @include borderWhite;
+                border-radius: 2px;
+                padding: .2rem;
+                color: $white;
+                letter-spacing: 1px;
+  }
+ 
+  

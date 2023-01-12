@@ -1,0 +1,13 @@
+@use '_Variables.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+
+.root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    @include gradientBG;
+    font-size: clamp(.8rem, 1rem, 1.6rem);
+}
