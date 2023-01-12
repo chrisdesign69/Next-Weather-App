@@ -1,6 +1,9 @@
 @use '_Variables.module.scss' as *;
 @use '_Gradients.module.scss' as *;
 @use '_Mixins.module.scss' as *;
+@use '_Animations.module.scss' as *;
+
+
 .container{
     background-color: $bg1;
     width: clamp(130px, 20rem, 100vw);
@@ -20,8 +23,6 @@
             font-size: .6rem;
         }
         form{
-            // @include borderRed;
-            // @include borderGreen;
             @include flexRow;
             gap: .5rem;
             margin-block: 1rem;
@@ -29,9 +30,10 @@
                 @include home1Mixin;
                 text-transform: uppercase;
                 font-size: .6rem;
+                
                 option{
                     background-color: $bg2;
-                    
+
                 }
             }
             label{
@@ -40,16 +42,18 @@
                 letter-spacing: 1px;
                 translate: -200px 4px;
                 opacity: .6;
+                transition: 
+                translate 2s,
+                color 2s ease-in;
             }
             input{
                 @include home1Mixin;
                 font-size: 1rem;
                 color: rgb(186, 186, 186);
-                &:hover{
-                    background-color: red;
-                }
-                &:hover + label{
-                    translate: .5rem 0px;
+            
+                &:hover + label, &:valid + label{
+                    translate: 1px 0px;
+                    color: $bg2;
                 }
             }
         }
@@ -60,4 +64,15 @@
     .contents{
         @include homeMixin;
     }
+}
+.notFound{
+    @include notFoundMixin;
+    color: red;
+    @include borderRed;
+    padding: .5rem;
+    font-size: .8rem;
+    border-radius: 2px;
+}
+.found{
+    @include foundMixin;
 }

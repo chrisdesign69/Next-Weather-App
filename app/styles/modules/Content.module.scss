@@ -1,0 +1,25 @@
+@use '_Variables.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+@use '_Animations.module.scss' as *;
+
+.container{
+    text-align: center;
+    width: 5rem;
+    .main{
+        translate: 0px -5px;
+    }
+    .minmax{
+        @include flexRow;
+        justify-content: space-between;
+        font-size: .6rem;
+        .min{
+            color: rgb(0, 238, 255);
+            opacity: .6;
+        }
+        .max{
+            color: rgb(255, 0, 0);
+            opacity: .6;
+        }
+    }
+}
