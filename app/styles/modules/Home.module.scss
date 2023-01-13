@@ -7,7 +7,6 @@
 .container{
     background-color: $bg1;
     width: clamp(130px, 20rem, 100vw);
-    height: 20rem;
     margin-inline: auto;
     margin-block-start: 5rem;
     border-radius: 5px;
@@ -75,4 +74,13 @@
 }
 .found{
     @include foundMixin;
+    span{
+        font-size: .6rem;
+        font-weight: 200;
+        text-transform: lowercase;
+        letter-spacing: 2px;
+    }
+}
+.countryCode{
+    translate: 0px -10px;
 }

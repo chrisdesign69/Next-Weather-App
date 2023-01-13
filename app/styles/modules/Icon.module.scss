@@ -1,0 +1,12 @@
+@use '_Variables.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+@use '_Animations.module.scss' as *;
+
+
+.container{
+    @include gridCenter;
+    .icon{
+        translate: 0px -20px;
+    }
+}
